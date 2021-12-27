@@ -1,26 +1,8 @@
-/*
- * Copyright (C) 2009 The Android Open Source Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package com.example.leaf_soc;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.UUID;
-
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothServerSocket;
@@ -41,17 +23,10 @@ public class BluetoothService {
     // Debugging
     private static final String TAG = "BluetoothService";
     private static final boolean D = true;
-
     // Name for the SDP record when creating server socket
     private static final String NAME = "SensBox";
-
     // Unique UUID for this application
     private static final UUID MY_UUID = UUID.fromString("0001101-0000-1000-8000-00805F9B34FB");
-  
-        //INSECURE	"8ce255c0-200a-11e0-ac64-0800200c9a66"
-    	//SECURE	"fa87c0d0-afac-11de-8a39-0800200c9a66"
-    	//SPP		"0001101-0000-1000-8000-00805F9B34FB"
-
     // Member fields
     private final BluetoothAdapter mAdapter;
     private final Handler mHandler;
@@ -59,7 +34,6 @@ public class BluetoothService {
     private ConnectThread mConnectThread;
     private ConnectedThread mConnectedThread;
     private int mState;
-
     // Constants that indicate the current connection state
     public static final int STATE_NONE = 0;       // we're doing nothing
     public static final int STATE_LISTEN = 1;     // now listening for incoming connections
@@ -76,8 +50,6 @@ public class BluetoothService {
         mState = STATE_NONE;
         mHandler = handler;
     }
-
-
     /**
      * Set the current state of the chat connection
      * @param state  An integer defining the current connection state
@@ -89,7 +61,6 @@ public class BluetoothService {
         // Give the new state Socket Type:to the Handler so the UI Activity can update
         mHandler.obtainMessage(MainActivity.MESSAGE_STATE_CHANGE, state, -1).sendToTarget();
     }
-
     /**
      * Return the current connection state. */
     public synchronized int getState() {
@@ -116,7 +87,6 @@ public class BluetoothService {
             mAcceptThread.start();
         }
     }
-
 
     /**
      * Start the ConnectThread to initiate a connection to a remote device.
