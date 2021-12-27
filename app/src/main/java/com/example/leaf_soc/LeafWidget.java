@@ -5,7 +5,6 @@ import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.util.TypedValue;
 import android.widget.RemoteViews;
-
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -21,7 +20,6 @@ public class LeafWidget extends AppWidgetProvider {
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.leaf_widget);
         views.setTextViewText(R.id.appwidgetSocText, widgetSocText);
         views.setTextViewTextSize(R.id.appwidgetSocText, TypedValue.COMPLEX_UNIT_PX, MainActivity.DISPLAY_HEIGHT/20);
-
         views.setTextViewText(R.id.appwidgetTempText, widgetTempText);
         views.setTextViewTextSize(R.id.appwidgetTempText, TypedValue.COMPLEX_UNIT_PX, MainActivity.DISPLAY_HEIGHT/20);
 
