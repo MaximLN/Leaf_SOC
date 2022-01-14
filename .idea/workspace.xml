@@ -16,7 +16,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0928244b-60a0-436d-b722-8fbc43adbdb5" name="Default Changelist" comment="del" />
+    <list default="true" id="0928244b-60a0-436d-b722-8fbc43adbdb5" name="Default Changelist" comment="del">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,7 +84,7 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="LGM700431572d3" />
-    <property name="last_opened_file_path" value="I:/ESP3D-WEBUI-2.1/languages/ru/index.html/index.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../JavaRushTasks" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
